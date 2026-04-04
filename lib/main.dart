@@ -63,7 +63,7 @@ class _MainAppState extends State<MainApp> {
             type: BottomNavigationBarType.fixed,
             items: [
               BottomNavigationBarItem(icon: Icon(Icons.home_outlined, size: 30,), label: "Home", backgroundColor: Color.fromRGBO(47, 111, 109, 0.1)),
-              BottomNavigationBarItem(icon: Icon(Icons.add_circle_outline_rounded, size: 30,), label: "Add"),
+              BottomNavigationBarItem(icon: Icon(Icons.add_circle_outline_rounded, size: 30,), label: "Notes"), // بنعمل التعديلات بتاعتنا عادي
               BottomNavigationBarItem(icon: Icon(Icons.favorite_border_outlined, size: 30,), label: "Favourites"),
               BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined, size: 30,), label: "Profile"),
             ]
