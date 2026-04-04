@@ -47,7 +47,7 @@ class _MainAppState extends State<MainApp> {
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
             selectedIconTheme: IconThemeData(
-              color: Color.fromRGBO(249, 199, 216,1)
+              color: Color.fromRGBO(47, 111, 109,1)
             ),
 
             onTap: (index) {
@@ -56,17 +56,16 @@ class _MainAppState extends State<MainApp> {
              });
             },
 
-            selectedItemColor:Color.fromRGBO(249, 199, 216,1) ,
+            selectedItemColor:Color.fromRGBO(47, 111, 109,1) ,
 
             unselectedItemColor: Color.fromRGBO(149, 158, 167, 1),
 
             type: BottomNavigationBarType.fixed,
             items: [
-              BottomNavigationBarItem(icon: Icon(Icons.home_outlined, size: 30,), label: "Home"),
-              BottomNavigationBarItem(icon: Icon(Icons.search, size: 30,), label: "Search"),
+              BottomNavigationBarItem(icon: Icon(Icons.home_outlined, size: 30,), label: "Home", backgroundColor: Color.fromRGBO(47, 111, 109, 0.1)),
               BottomNavigationBarItem(icon: Icon(Icons.add_circle_outline_rounded, size: 30,), label: "Add"),
-              BottomNavigationBarItem(icon: Icon(Icons.favorite_border_outlined, size: 30,), label: "Add"),
-              BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined, size: 30,), label: "Add"),
+              BottomNavigationBarItem(icon: Icon(Icons.favorite_border_outlined, size: 30,), label: "Favourites"),
+              BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined, size: 30,), label: "Profile"),
             ]
             
         ),
