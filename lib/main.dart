@@ -3,8 +3,6 @@ import 'package:notes_app/pages/create_note_page.dart';
 import 'package:notes_app/pages/favorites_page.dart';
 import 'package:notes_app/pages/home_page.dart';
 import 'package:notes_app/pages/login_page.dart';
-import 'package:notes_app/pages/notifications_page.dart';
-import 'package:notes_app/pages/login_page.dart';
 import 'package:notes_app/pages/profile_page.dart';
 import 'package:notes_app/pages/search_page.dart';
 
