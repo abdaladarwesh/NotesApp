@@ -3,7 +3,6 @@ import 'package:notes_app/pages/create_note_page.dart';
 import 'package:notes_app/pages/favorites_page.dart';
 import 'package:notes_app/pages/home_page.dart';
 import 'package:notes_app/pages/login_page.dart';
-import 'package:notes_app/pages/notes_page.dart';
 import 'package:notes_app/pages/profile_page.dart';
 import 'package:notes_app/pages/search_page.dart';
 
@@ -38,8 +37,9 @@ class _MainAppState extends State<MainApp> {
 
   final List<Widget> _pages = [
     HomePage(),
+    SearchPage(),
     CreateNotePage(),
-    NotesPage(),
+    FavoritesPage(),
     ProfilePage()
   ];
 
@@ -67,7 +67,7 @@ class _MainAppState extends State<MainApp> {
             items: [
               BottomNavigationBarItem(icon: Icon(Icons.home_outlined, size: 30,), label: "Home", backgroundColor: Color.fromRGBO(47, 111, 109, 0.1)),
               BottomNavigationBarItem(icon: Icon(Icons.add_circle_outline_rounded, size: 30,), label: "Notes"), // بنعمل التعديلات بتاعتنا عادي
-              BottomNavigationBarItem(icon: Icon(Icons.sticky_note_2_outlined, size: 30,), label: "Notes"),
+              BottomNavigationBarItem(icon: Icon(Icons.favorite_border_outlined, size: 30,), label: "Favourites"),
               BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined, size: 30,), label: "Profile"),
             ]
             
