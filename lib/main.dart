@@ -21,8 +21,13 @@ class NotesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+<<<<<<< HEAD
       // home: MainApp(),
       home: CreateAccountPage()
+=======
+      home: MainApp(),
+      // home: LoginPage()
+>>>>>>> bbf5abb (Add login_page.dart)
     );
   }
 }
