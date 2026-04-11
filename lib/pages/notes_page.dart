@@ -106,5 +106,57 @@ class NoteCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(bottom: 16),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: Color(0xFFEDF2F7)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                title,
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              Icon(
+                isFavorite ? Icons.favorite : Icons.favorite_border,
+                color: isFavorite ? Colors.redAccent : Colors.grey[300],
+              ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          Text(
+            preview,
+            style: TextStyle(color: Colors.grey[600], height: 1.4),
+          ),
+          const SizedBox(height: 16),
+          Row(
+            children: [
+              Icon(Icons.calendar_today_outlined, size: 14, color: Colors.grey[500]),
+              const SizedBox(width: 4),
+              Text(date, style: TextStyle(color: Colors.grey[500], fontSize: 12)),
+              const SizedBox(width: 12),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFE6FFFA),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Text(
+                  tag,
+                  style: const TextStyle(color: Color(0xFF319795), fontSize: 12, fontWeight: FontWeight.w600),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
