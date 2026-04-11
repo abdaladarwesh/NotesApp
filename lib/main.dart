@@ -34,7 +34,6 @@ class _MainAppState extends State<MainApp> {
 
   final List<Widget> _pages = [
     HomePage(),
-    SearchPage(),
     CreateNotePage(),
     FavoritesPage(),
     ProfilePage()
