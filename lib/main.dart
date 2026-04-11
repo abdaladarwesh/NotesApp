@@ -23,6 +23,7 @@ class NotesApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // home: MainApp(),
       home: MainApp(),
+      // home: LoginPage()
     );
   }
 }
