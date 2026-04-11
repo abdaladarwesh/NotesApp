@@ -16,7 +16,9 @@ class NotesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: MainApp(),
+      // home: LoginPage()
     );
   }
 }
@@ -34,6 +36,7 @@ class _MainAppState extends State<MainApp> {
 
   final List<Widget> _pages = [
     HomePage(),
+    SearchPage(),
     CreateNotePage(),
     FavoritesPage(),
     ProfilePage()
