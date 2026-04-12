@@ -6,7 +6,8 @@ class CreateAccountPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.white,
+
       body: Center(
         child: Container(
           margin: EdgeInsets.all(20),
@@ -18,24 +19,31 @@ class CreateAccountPage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+
+              SizedBox(height: 20),
               Column(
                 children: [
                   Text(
                     "Create Account",
                     style: TextStyle(
-                      fontSize: 22,
+                      fontSize: 28,
                       color: Colors.teal,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 5),
+                  SizedBox(height: 8),
                   Text(
                     "Start your journaling journey",
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 14,
+                    ),
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+
+              SizedBox(height: 30),
+
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -61,6 +69,7 @@ class CreateAccountPage extends StatelessWidget {
                   ),
                 ],
               ),
+
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -86,6 +95,7 @@ class CreateAccountPage extends StatelessWidget {
                   ),
                 ],
               ),
+
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -111,7 +121,9 @@ class CreateAccountPage extends StatelessWidget {
                   ),
                 ],
               ),
+
               SizedBox(height: 20),
+
               Container(
                 width: double.infinity,
                 height: 50,
@@ -129,7 +141,9 @@ class CreateAccountPage extends StatelessWidget {
                   ],
                 ),
               ),
+
               SizedBox(height: 15),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -140,7 +154,9 @@ class CreateAccountPage extends StatelessWidget {
                   ),
                 ],
               ),
+
               SizedBox(height: 10),
+
               Text(
                 "By signing up, you agree to our Terms & Privacy Policy",
                 style: TextStyle(fontSize: 10, color: Colors.grey),
