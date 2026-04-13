@@ -20,6 +20,7 @@ class NotesApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: MainApp(),
+      // home: SearchPage()
     );
   }
 }
