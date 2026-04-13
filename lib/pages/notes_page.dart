@@ -1,110 +1,127 @@
 import 'package:flutter/material.dart';
 
-class NotesPage extends StatelessWidget {
-  const NotesPage({super.key});
+class NotificationsPage extends StatelessWidget {
+  const NotificationsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF8F9FA),
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              _buildHeader(),
-              const SizedBox(height: 20),
-              Expanded(
-                child: ListView(
-                  children: const [
-                    NoteCard(
-                      title: 'Morning Reflections',
-                      preview: 'Today started with a beautiful sunrise. Feeling grateful for...',
-                      date: 'Apr 4, 2026',
-                      tag: 'Personal',
-                      isFavorite: true,
-                    ),
-                    NoteCard(
-                      title: 'Project Ideas',
-                      preview: 'New app concept: A mindfulness tracker that combines...',
-                      date: 'Apr 3, 2026',
-                      tag: 'Ideas',
-                      isFavorite: false,
-                    ),
-                    NoteCard(
-                      title: 'Meeting Notes',
-                      preview: 'Discussed Q2 goals with the team. Key takeaways include...',
-                      date: 'Apr 2, 2026',
-                      tag: 'Work',
-                      isFavorite: true,
-                    ),
-                  ],
-                ),
-              ),
-            ],
+      appBar: AppBar(
+        centerTitle: true,
+        leading: Icon(Icons.arrow_back),
+        title: Text(
+          "Notification",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () {},
+            style: TextButton.styleFrom(
+              foregroundColor: Color.fromRGBO(47, 111, 109, 1),
+            ),
+            child: Text(
+              "Clear",
+              style: TextStyle(color: Color.fromRGBO(47, 111, 109, 1)),
+            ),
           ),
-        ),
+        ],
       ),
-    );
-  }
 
-  Widget _buildHeader() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text(
-              'All Notes',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Color(0xFF1A202C)),
-            ),
-            Text('8 notes', style: TextStyle(color: Colors.grey)),
-          ],
-        ),
-        Row(
-          children: [
-            Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: const Color(0xFF3E6D67),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: const Icon(Icons.list, color: Colors.white),
-            ),
-            const SizedBox(width: 8),
-            Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: Color(0xFFE2E8F0),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: const Icon(Icons.grid_view_rounded, color: Colors.grey),
-            ),
-          ],
-        ),
-      ],
+      body: ListView.builder(
+        itemCount: 5,
+        itemBuilder: (BuildContext context, int index) {
+          return NotificationContainer(title: "Reminder", date: "5 Minutes ago", description: "Don't forget to write your daily reflection",);
+        },
+      ),
     );
   }
 }
 
-class NoteCard extends StatelessWidget {
-  final String title;
-  final String preview;
-  final String date;
-  final String tag;
-  final bool isFavorite;
-
-  const NoteCard({
+class NotificationContainer extends StatelessWidget {
+  const NotificationContainer({
     super.key,
     required this.title,
-    required this.preview,
-    required this.date,
-    required this.tag,
-    required this.isFavorite,
+    required this.description,
+    required this.date
   });
+
+  final String title;
+  final String description;
+  final String date;
 
   @override
   Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(25),
+          color: Colors.white,
+          border: BoxBorder.fromLTRB(left: BorderSide(
+              color: Color.fromRGBO(47, 111, 109, 1),
+              width: 5
+
+          )),
+          boxShadow: [
+            BoxShadow(
+                offset: Offset(0, 0),
+                color: Colors.grey.shade300,
+                blurRadius: 10
+            )
+          ]
+      ),
+      height: 150,
+      child: Padding(
+        padding: EdgeInsets.only(top: 20, bottom: 20, right: 20),
+        child: Row(
+          children: [
+            Column(
+              children: [
+                Expanded(
+                  child: Container(
+                    alignment: AlignmentGeometry.topCenter,
+                    margin: EdgeInsets.only(left: 20,),
+                    padding: EdgeInsets.all(15),
+                    decoration: BoxDecoration(
+                        color: Colors.green.shade200,
+                        borderRadius: BorderRadius.circular(20)
+                    ),
+                    child: Icon(Icons.notifications_none, color: Colors.green,),
+                  ),
+                ),
+              ],
+            ),
+            Expanded(
+              flex: 2,
+              child: Padding(
+                padding:  EdgeInsets.only(left: 10.0),
+
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(title, style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20
+                    ),),
+                    Text(description),
+                    Spacer(),
+                    Text(date),
+                  ],
+                ),
+              ),
+            ),
+            Column(
+              children: [Container(
+                width: 10,
+                height: 10,
+                decoration: BoxDecoration(
+                    color: Color.fromRGBO(47, 111, 109, 1),
+                    shape: BoxShape.circle
+                ),
+              )],
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
