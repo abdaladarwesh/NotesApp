@@ -10,8 +10,7 @@ class CreateAccountPage extends StatelessWidget {
 
       body: Center(
         child: Container(
-          margin: EdgeInsets.all(20),
-          padding: EdgeInsets.all(20),
+          padding: EdgeInsets.all(15),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(25),
@@ -26,18 +25,15 @@ class CreateAccountPage extends StatelessWidget {
                   Text(
                     "Create Account",
                     style: TextStyle(
-                      fontSize: 28,
-                      color: Colors.teal,
-                      fontWeight: FontWeight.bold,
+                      color: Color.fromRGBO(47, 111, 109, 1),
+                      fontSize: 40,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                   SizedBox(height: 8),
                   Text(
                     "Start your journaling journey",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 14,
-                    ),
+                    style: TextStyle(color: Colors.grey.shade400, fontSize: 15),
                   ),
                 ],
               ),
@@ -127,26 +123,39 @@ class CreateAccountPage extends StatelessWidget {
               Container(
                 width: double.infinity,
                 height: 50,
-                decoration: BoxDecoration(
-                  color: Colors.teal,
-                  borderRadius: BorderRadius.circular(10),
-                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      "Sign Up",
-                      style: TextStyle(color: Colors.white),
-                    ),
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.symmetric(vertical: 15),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          backgroundColor: Color.fromRGBO(47, 111, 109, 1),
+                        ),
+                        child: Text(
+                          "Sign Up",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ), // Login Button
                   ],
                 ),
               ),
 
-              SizedBox(height: 15),
+              SizedBox(height: 60),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+
                   Text("Already have an account? "),
                   Text(
                     "Login",
@@ -155,7 +164,7 @@ class CreateAccountPage extends StatelessWidget {
                 ],
               ),
 
-              SizedBox(height: 10),
+              SizedBox(height: 15),
 
               Text(
                 "By signing up, you agree to our Terms & Privacy Policy",

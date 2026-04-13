@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/pages/create_account_page.dart';
 import 'package:notes_app/pages/create_note_page.dart';
+import 'package:notes_app/pages/edit_proflie_page.dart';
 import 'package:notes_app/pages/favorites_page.dart';
 import 'package:notes_app/pages/home_page.dart';
 import 'package:notes_app/pages/login_page.dart';
@@ -19,8 +21,8 @@ class NotesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainApp(),
-      // home: SearchPage()
+      // home: MainApp(),
+      home: CreateAccountPage()
     );
   }
 }
@@ -40,7 +42,6 @@ class _MainAppState extends State<MainApp> {
     HomePage(),
     SearchPage(),
     CreateNotePage(),
-    FavoritesPage(),
     ProfilePage()
   ];
 
@@ -49,6 +50,7 @@ class _MainAppState extends State<MainApp> {
     return Scaffold(
       body: _pages[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.white,
           currentIndex: _currentIndex,
             selectedIconTheme: IconThemeData(
               color: Color.fromRGBO(47, 111, 109,1)
@@ -67,8 +69,8 @@ class _MainAppState extends State<MainApp> {
             type: BottomNavigationBarType.fixed,
             items: [
               BottomNavigationBarItem(icon: Icon(Icons.home_outlined, size: 30,), label: "Home", backgroundColor: Color.fromRGBO(47, 111, 109, 0.1)),
-              BottomNavigationBarItem(icon: Icon(Icons.add_circle_outline_rounded, size: 30,), label: "Notes"), // بنعمل التعديلات بتاعتنا عادي
-              BottomNavigationBarItem(icon: Icon(Icons.favorite_border_outlined, size: 30,), label: "Favourites"),
+              BottomNavigationBarItem(icon: Icon(Icons.search, size: 30,), label: "Search"), // بنعمل التعديلات بتاعتنا عادي
+              BottomNavigationBarItem(icon: Icon(Icons.notes_rounded, size: 30,), label: "Notes"),
               BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined, size: 30,), label: "Profile"),
             ]
             

@@ -101,6 +101,7 @@ class EditProfilePage extends StatelessWidget {
             onPressed: () {},
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.teal,
+              foregroundColor: Colors.white,
               padding: EdgeInsets.symmetric(vertical: 14),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
@@ -126,10 +127,12 @@ class EditProfilePage extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Text("Change password", style: TextStyle(color: Colors.teal)),
+                SizedBox(height: 10),
                 Text(
                   "Privacy settings",
                   style: TextStyle(color: Colors.teal),
                 ),
+                SizedBox(height: 10),
                 Text("Delete account", style: TextStyle(color: Colors.red)),
               ],
             ),
