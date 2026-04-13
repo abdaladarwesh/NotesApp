@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/pages/create_account_page.dart';
 import 'package:notes_app/pages/create_note_page.dart';
+import 'package:notes_app/pages/edit_proflie_page.dart';
 import 'package:notes_app/pages/favorites_page.dart';
 import 'package:notes_app/pages/home_page.dart';
 import 'package:notes_app/pages/login_page.dart';
 import 'package:notes_app/pages/profile_page.dart';
 import 'package:notes_app/pages/search_page.dart';
+import 'package:notes_app/pages/settings_page.dart';
 
 void main() {
   runApp(NotesApp());
