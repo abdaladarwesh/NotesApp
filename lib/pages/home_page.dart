@@ -6,6 +6,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,
@@ -59,7 +60,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              margin: EdgeInsets.symmetric(vertical: 0, horizontal: 30),
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
               width: 450,
               child: Row(
                 children: [
