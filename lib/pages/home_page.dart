@@ -85,121 +85,120 @@ class HomePage extends StatelessWidget {
             ), //categories
             Container(
               margin: EdgeInsets.symmetric(horizontal: 20),
-              child: SingleChildScrollView(
+              height: 40,
+              child: ListView(
                 scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 10),
-                      padding: EdgeInsets.symmetric(vertical: 4, horizontal: 15),
-                      height: 30,
+                children: [
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.blue[100],
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Work",
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ),
 
-                      decoration: BoxDecoration(
-                        color: Colors.blue[100],
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Column(
-                        children: [
-                          Text(
-                            "Work",
-                            style: TextStyle(
-                              color: Colors.blue[500],
-                              fontSize: 14,
-                            ),
-                          ),
-                        ],
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.purple[100],
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Personal",
+                        style: TextStyle(
+                          color: Colors.purple,
+                          fontSize: 14,
+                        ),
                       ),
                     ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 10),
-                      padding: EdgeInsets.symmetric(vertical: 4, horizontal: 15),
-                      height: 30,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.purple[100],
-                      ),
-                      child: Column(
-                        children: [
-                          Text(
-                            "Personal",
-                            style: TextStyle(color: Colors.purple, fontSize: 14),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 10),
-                      padding: EdgeInsets.symmetric(vertical: 4, horizontal: 15),
-                      height: 30,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.red[100],
-                      ),
-                      child: Column(
-                        children: [
-                          Text(
-                            "Ideas",
-                            style: TextStyle(color: Colors.red, fontSize: 14),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 10),
-                      padding: EdgeInsets.symmetric(vertical: 4, horizontal: 15),
-                      height: 30,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.orange[100],
-                      ),
-                      child: Column(
-                        children: [
-                          Text(
-                            "Travel",
-                            style: TextStyle(color: Colors.orange, fontSize: 14),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 10),
-                      padding: EdgeInsets.symmetric(vertical: 4, horizontal: 15),
-                      height: 30,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.pink[100],
-                      ),
-                      child: Column(
-                        children: [
-                          Text(
-                            "Study",
-                            style: TextStyle(color: Colors.pink, fontSize: 14),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
+                  ),
 
-                      margin: EdgeInsets.symmetric(horizontal: 10),
-                      padding: EdgeInsets.symmetric(vertical: 4, horizontal: 15),
-                      height: 30,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.amber[100],
-                      ),
-                      child: Column(
-                        children: [
-                          Text(
-                            "Tasks",
-                            style: TextStyle(color: Colors.amber, fontSize: 14),
-                          ),
-                        ],
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.red[100],
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Ideas",
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontSize: 14,
+                        ),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.orange[100],
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Travel",
+                        style: TextStyle(
+                          color: Colors.orange,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.pink[100],
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Study",
+                        style: TextStyle(
+                          color: Colors.pink,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.amber[100],
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Tasks",
+                        style: TextStyle(
+                          color: Colors.amber,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ), //categories
+            ), //categories with scroll
             Container(
               margin: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
               child: Row(
@@ -214,76 +213,82 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ), //Resent Nots
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              // height: 100,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+            Expanded(
+              child: ListView(
                 children: [
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    // height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          "Morning Reflections",
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                        Container(
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Morning Reflections",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.favorite,
+                                    color: Colors.grey[300],
+                                    size: 18,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-                        Row(
+                        Column(
                           children: [
-                            Icon(
-                              Icons.favorite,
-                              color: Colors.grey[300],
-                              size: 18,
+                            Text(
+                              "Today started with beautiful sunrise. Feeling\n greatful for...",
+                              style: TextStyle(color: Colors.grey[700]),
                             ),
                           ],
                         ),
-                      ],
-                    ),
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "Today started with beautiful sunrise. Feeling\n greatful for...",
-                        style: TextStyle(color: Colors.grey[700]),
-                      ),
-                    ],
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(vertical: 10),
-                    child: Row(
-                      spacing: 5,
-                      children: [
-                        Icon(
-                          Icons.date_range,
-                          color: Colors.grey[300],
-                          size: 15,
-                        ),
-                        Row(
-                          children: [
-                            Text("Apr 4,2026", style: TextStyle(fontSize: 10)),
-                          ],
-                        ),
                         Container(
-                          margin: EdgeInsets.symmetric(horizontal: 10),
-                          padding: EdgeInsets.symmetric(horizontal: 6),
-                          width: 55,
-                          decoration: BoxDecoration(
-                            color: Colors.green[100],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
+                          margin: EdgeInsets.symmetric(vertical: 10),
                           child: Row(
+                            spacing: 5,
                             children: [
-                              Text(
-                                "Personal",
-                                style: TextStyle(
-                                  color: Colors.green,
-                                  fontSize: 10,
+                              Icon(
+                                Icons.date_range,
+                                color: Colors.grey[300],
+                                size: 15,
+                              ),
+                              Row(
+                                children: [
+                                  Text("Apr 4,2026", style: TextStyle(fontSize: 10)),
+                                ],
+                              ),
+                              Container(
+                                margin: EdgeInsets.symmetric(horizontal: 10),
+                                padding: EdgeInsets.symmetric(horizontal: 6),
+                                width: 55,
+                                decoration: BoxDecoration(
+                                  color: Colors.green[100],
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      "Personal",
+                                      style: TextStyle(
+                                        color: Colors.green,
+                                        fontSize: 10,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
@@ -291,80 +296,80 @@ class HomePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ),
-                ],
-              ),
-            ), //card 1
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              // height: 100,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                  ), //card 1
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    // height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          "Project Ideas",
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                        Container(
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Project Ideas",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.favorite,
+                                    color: Colors.grey[300],
+                                    size: 18,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-                        Row(
+                        Column(
                           children: [
-                            Icon(
-                              Icons.favorite,
-                              color: Colors.grey[300],
-                              size: 18,
+                            Text(
+                              "New app concept: A mindfulness tracker that\n combines",
+                              style: TextStyle(color: Colors.grey[700], fontSize: 14),
                             ),
                           ],
                         ),
-                      ],
-                    ),
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "New app concept: A mindfulness tracker that\n combines",
-                        style: TextStyle(color: Colors.grey[700], fontSize: 14),
-                      ),
-                    ],
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(vertical: 10),
-                    child: Row(
-                      spacing: 5,
-                      children: [
-                        Icon(
-                          Icons.date_range,
-                          color: Colors.grey[300],
-                          size: 15,
-                        ),
-                        Row(
-                          children: [
-                            Text("Apr 3,2026", style: TextStyle(fontSize: 10)),
-                          ],
-                        ),
                         Container(
-                          margin: EdgeInsets.symmetric(horizontal: 10),
-                          padding: EdgeInsets.symmetric(horizontal: 6),
-                          width: 43,
-                          decoration: BoxDecoration(
-                            color: Colors.green[100],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
+                          margin: EdgeInsets.symmetric(vertical: 10),
                           child: Row(
+                            spacing: 5,
                             children: [
-                              Text(
-                                "Ideas",
-                                style: TextStyle(
-                                  color: Colors.green,
-                                  fontSize: 12,
+                              Icon(
+                                Icons.date_range,
+                                color: Colors.grey[300],
+                                size: 15,
+                              ),
+                              Row(
+                                children: [
+                                  Text("Apr 3,2026", style: TextStyle(fontSize: 10)),
+                                ],
+                              ),
+                              Container(
+                                margin: EdgeInsets.symmetric(horizontal: 10),
+                                padding: EdgeInsets.symmetric(horizontal: 6),
+                                width: 43,
+                                decoration: BoxDecoration(
+                                  color: Colors.green[100],
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      "Ideas",
+                                      style: TextStyle(
+                                        color: Colors.green,
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
@@ -372,10 +377,415 @@ class HomePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ),
+                  ), //card 2
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    // height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Project Ideas",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.favorite,
+                                    color: Colors.grey[300],
+                                    size: 18,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "New app concept: A mindfulness tracker that\n combines",
+                              style: TextStyle(color: Colors.grey[700], fontSize: 14),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                            spacing: 5,
+                            children: [
+                              Icon(
+                                Icons.date_range,
+                                color: Colors.grey[300],
+                                size: 15,
+                              ),
+                              Row(
+                                children: [
+                                  Text("Apr 3,2026", style: TextStyle(fontSize: 10)),
+                                ],
+                              ),
+                              Container(
+                                margin: EdgeInsets.symmetric(horizontal: 10),
+                                padding: EdgeInsets.symmetric(horizontal: 6),
+                                width: 43,
+                                decoration: BoxDecoration(
+                                  color: Colors.green[100],
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      "Ideas",
+                                      style: TextStyle(
+                                        color: Colors.green,
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ), //card 2
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    // height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Project Ideas",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.favorite,
+                                    color: Colors.grey[300],
+                                    size: 18,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "New app concept: A mindfulness tracker that\n combines",
+                              style: TextStyle(color: Colors.grey[700], fontSize: 14),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                            spacing: 5,
+                            children: [
+                              Icon(
+                                Icons.date_range,
+                                color: Colors.grey[300],
+                                size: 15,
+                              ),
+                              Row(
+                                children: [
+                                  Text("Apr 3,2026", style: TextStyle(fontSize: 10)),
+                                ],
+                              ),
+                              Container(
+                                margin: EdgeInsets.symmetric(horizontal: 10),
+                                padding: EdgeInsets.symmetric(horizontal: 6),
+                                width: 43,
+                                decoration: BoxDecoration(
+                                  color: Colors.green[100],
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      "Ideas",
+                                      style: TextStyle(
+                                        color: Colors.green,
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ), //card 2
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    // height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Project Ideas",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.favorite,
+                                    color: Colors.grey[300],
+                                    size: 18,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "New app concept: A mindfulness tracker that\n combines",
+                              style: TextStyle(color: Colors.grey[700], fontSize: 14),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                            spacing: 5,
+                            children: [
+                              Icon(
+                                Icons.date_range,
+                                color: Colors.grey[300],
+                                size: 15,
+                              ),
+                              Row(
+                                children: [
+                                  Text("Apr 3,2026", style: TextStyle(fontSize: 10)),
+                                ],
+                              ),
+                              Container(
+                                margin: EdgeInsets.symmetric(horizontal: 10),
+                                padding: EdgeInsets.symmetric(horizontal: 6),
+                                width: 43,
+                                decoration: BoxDecoration(
+                                  color: Colors.green[100],
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      "Ideas",
+                                      style: TextStyle(
+                                        color: Colors.green,
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ), //card 2
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    // height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Project Ideas",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.favorite,
+                                    color: Colors.grey[300],
+                                    size: 18,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "New app concept: A mindfulness tracker that\n combines",
+                              style: TextStyle(color: Colors.grey[700], fontSize: 14),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                            spacing: 5,
+                            children: [
+                              Icon(
+                                Icons.date_range,
+                                color: Colors.grey[300],
+                                size: 15,
+                              ),
+                              Row(
+                                children: [
+                                  Text("Apr 3,2026", style: TextStyle(fontSize: 10)),
+                                ],
+                              ),
+                              Container(
+                                margin: EdgeInsets.symmetric(horizontal: 10),
+                                padding: EdgeInsets.symmetric(horizontal: 6),
+                                width: 43,
+                                decoration: BoxDecoration(
+                                  color: Colors.green[100],
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      "Ideas",
+                                      style: TextStyle(
+                                        color: Colors.green,
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ), //card 2
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    // height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Project Ideas",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.favorite,
+                                    color: Colors.grey[300],
+                                    size: 18,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "New app concept: A mindfulness tracker that\n combines",
+                              style: TextStyle(color: Colors.grey[700], fontSize: 14),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                            spacing: 5,
+                            children: [
+                              Icon(
+                                Icons.date_range,
+                                color: Colors.grey[300],
+                                size: 15,
+                              ),
+                              Row(
+                                children: [
+                                  Text("Apr 3,2026", style: TextStyle(fontSize: 10)),
+                                ],
+                              ),
+                              Container(
+                                margin: EdgeInsets.symmetric(horizontal: 10),
+                                padding: EdgeInsets.symmetric(horizontal: 6),
+                                width: 43,
+                                decoration: BoxDecoration(
+                                  color: Colors.green[100],
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      "Ideas",
+                                      style: TextStyle(
+                                        color: Colors.green,
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ), //card 2
                 ],
               ),
-            ), //card 2
+            ),  //cards
           ],
         ),
       ),
